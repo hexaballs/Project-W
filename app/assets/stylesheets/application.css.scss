@@ -1,0 +1,78 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@font-face {
+    font-family: 'trackregular';
+    src: url(font-path('track-webfont.eot'));
+    src: url(font-path('track-webfont.eot') + '?#iefix') format('embedded-opentype'),
+         url(font-path('track-webfont.woff2')) format('woff2'),
+         url(font-path('track-webfont.woff')) format('woff'),
+         url(font-path('track-webfont.ttf')) format('truetype'),
+         url(font-path('track-webfont.svg') + '#trackregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.name {
+  font-family: 'trackregular', sans-serif;
+  text-align: center;
+  font-size: 60px;
+  margin-top: 20px;
+  color: white;
+  background-color: black;
+  padding-top: 10px;
+}
+
+.tagline h2 {
+  font-family: sans-serif;
+  text-align: center;
+  font-size: 14px;
+  margin: 0px;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.top-hr hr {
+  height: 8px;
+  color: black;
+  background-color: black;
+  margin: 0px;
+}
+
+.main-menu {
+  padding-left: 15px;
+}
+
+.main-menu li {
+  display: inline-block;
+  margin-right: 30px;
+  margin-top: 15px;
+  font-family: 'trackregular', sans-serif;
+  font-size: 20px;
+}
+
+.main-menu li a {
+  text-decoration: none;
+}
+
+.btm-hr hr {
+  height: 3px;
+  color: black;
+  background-color: black;
+  margin-top: 30px;
+  margin-left: 0px;
+  margin-right: 0px;
+}

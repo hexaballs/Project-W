@@ -1,14 +1,53 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>ProjectW</title>
+  <title>TROVE</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <%= stylesheet_link_tag '//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css' %>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div class="container">
 
-<%= yield %>
+    <div class="row">
+      <div class="header col-sm-10 col-sm-offset-1">
+        <div class="name">Trove</div>
+        <div class="tagline">
+          <h2>Your Sartorial Treasure Chest</h2>
+        </div>
+        <div class="top-hr"><hr></div>
+        <ul class="main-menu">
+          <li><a href="#">New</a></li>
+          <li><a href="#">Men</a></li>
+          <li><a href="#">Women</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
 
+  <div class="container">
+    <%= yield %>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="header col-sm-10 col-sm-offset-1">
+        <div class="footer">
+          <div class="btm-hr"><hr></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+  <%= javascript_include_tag '//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js' %>
+  <%= javascript_include_tag '//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 </body>
 </html>
