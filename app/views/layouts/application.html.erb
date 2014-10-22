@@ -11,12 +11,14 @@
 <body>
   <div class="container">
 
+    <!-- header starts here -->
     <div class="row">
       <div class="header col-sm-10 col-sm-offset-1">
         <div class="name">Trove</div>
         <div class="quote">
           <h2>Be careless in your dress if you will, but keep a tidy soul. <span class="quote-author">- <a href="http://en.wikipedia.org/wiki/Mark_Twain" target="_blank">Mark Twain</a><span></h2>
         </div>
+        <!-- menu bar starts here -->
         <div class="top-hr"><hr></div>
         <ul class="main-menu">
           <li><a href="#">New</a></li>
@@ -27,10 +29,12 @@
     </div>
   </div>
 
+  <!-- content starts here -->
   <div class="container">
     <%= yield %>
   </div>
 
+  <!-- footer starts here -->
   <div class="container">
     <div class="row">
       <div class="header col-sm-10 col-sm-offset-1">
@@ -40,11 +44,6 @@
       </div>
     </div>
   </div>
-
-
-
-
-
 
   <%= javascript_include_tag '//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js' %>
   <%= javascript_include_tag '//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js' %>

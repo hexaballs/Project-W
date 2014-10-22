@@ -9,3 +9,57 @@
 .slider img {
   width: 945px;
 }
+
+.mid-hr hr {
+  height: 2px;
+  color: #ccc;
+  background-color: #525252;
+  margin: 0px;
+}
+
+.mid-menu {
+  text-align: center;
+}
+
+
+.mid-menu li {
+  display: inline-block;
+  margin-right: 30px;
+  margin-top: 15px;
+  font-family: 'trackregular', sans-serif;
+  font-size: 20px;
+}
+
+.mid-menu li a {
+  text-decoration: none;
+  color: black;
+}
+
+.tag-section {
+  text-align: center;
+}
+
+.col {
+  margin: 0px;
+  padding: 0px;
+  float: left;
+  width: 225px;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.tag-wrapper {
+  border: 1px solid #aaa;
+  width: 225px;
+  margin-top: 15px;
+  position: static;
+  text-align: center;
+  border-radius: 2px;
+  clear: none;
+}
+
+.tag-wrapper img {
+  width: 205px;
+  padding: 5px;
+  padding-top: 15px;
+}
