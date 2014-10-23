@@ -1,0 +1,93 @@
+// Place all the styles related to the album controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.container .jumbotron.show {
+  border-radius: 0px;
+}
+
+.header-wrapper.show {
+  width: 945px;
+}
+
+.col.left {
+  width: 700px;
+  float: left;
+}
+
+.col.right {
+  width: 245px;
+  float: left;
+}
+
+.tag-header.show {
+  background-color: black;
+  padding: 15px;
+  margin: 0px;
+  margin-right: 0px;
+  width: 700px;
+  height: 80px;
+}
+
+.tag-header.show h1 {
+  font-family: 'robotomedium';
+  margin-top: 0px;
+  margin-bottom: 0px;
+  color: white;
+  font-size: 40px;
+}
+
+.sidebar-header.show {
+  background-color: white;
+  padding: 15px;
+  padding-top: 10px;
+  margin: 0px;
+  width: 245px;
+  height: 80px;
+  border: 9px solid black;
+  border-left: 0px;
+  text-align: center;
+}
+
+.sidebar-header.show h1 {
+  font-family: 'robotomedium';
+  margin-top: 0px;
+  margin-bottom: 0px;
+  color: black;
+  font-size: 35px;
+}
+
+.tag-wrapper.show {
+  border: 1px solid #aaa;
+  width: 700px;
+  position: static;
+  text-align: center;
+  border-radius: 2px;
+  clear: none;
+  background-color: white;
+  margin-top: 0px;
+}
+
+.tag-img.show img {
+  width: 700px;
+  padding-left: 35px;
+  padding-right: 35px;
+  padding-top: 35px;
+  padding-bottom: 0px;
+}
+
+.tag-link.show p {
+  font-family: 'robotoregular';
+  font-weight: bold;
+  width: 700px;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-size: 14px;
+  text-align: left;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.tag-link-page-header h1 {
+  font-family: 'robotobold';
+}
