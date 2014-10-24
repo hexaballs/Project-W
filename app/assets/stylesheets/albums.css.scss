@@ -1,0 +1,195 @@
+// Place all the styles related to the album controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.container .jumbotron.show {
+  border-radius: 0px;
+}
+
+.header-wrapper.show {
+  width: 945px;
+}
+
+/* Left Column Styling*/
+
+.col-left {
+  width: 700px;
+  float: left;
+}
+
+.tag-header.show {
+  background-color: black;
+  padding: 15px;
+  margin: 0px;
+  margin-right: 0px;
+  width: 700px;
+  height: 80px;
+}
+
+.tag-header.show h1 {
+  font-family: 'robotomedium';
+  margin-top: 0px;
+  margin-bottom: 0px;
+  color: white;
+  font-size: 40px;
+}
+
+.main-tag-wrapper.show {
+  border: 1px solid #aaa;
+  width: 700px;
+  position: static;
+  text-align: center;
+  border-radius: 2px;
+  clear: none;
+  background-color: white;
+  margin-top: 0px;
+  margin-top: 10px;
+  padding-bottom: 35px;
+}
+
+.main-tag-img.show img {
+  width: 700px;
+  padding-left: 35px;
+  padding-right: 35px;
+  padding-top: 35px;
+  padding-bottom: 0px;
+}
+
+.main-tag-link.show p {
+  font-family: 'robotoregular';
+  font-weight: bold;
+  width: 700px;
+  padding-left: 35px;
+  padding-right: 35px;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.tag-link-page-header h1 {
+  font-family: 'robotobold';
+}
+
+.mid-hr.show {
+  height: 2px;
+  color: #ccc;
+  background-color: #525252;
+  margin: 0px;
+  width: 630px;
+  margin-left: 35px;
+  margin-right: 35px;
+}
+
+/* Product item styling */
+.category.show {
+  background-color: black;
+  margin-top: 20px;
+  margin-left: 35px;
+  margin-right: 35px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.category.show p {
+  font-family: 'trackregular';
+  color: white;
+  margin: 0px;
+  padding: 0px;
+}
+
+.stash-container.show {
+  margin-top: 15px;
+  margin-left: 35px;
+  margin-right: 35px;
+  margin-bottom: 15px;
+  height: 300px;
+}
+
+.stash-wrapper {
+  width: 200px;
+  height: 190px;
+  margin: 0px;
+  padding: 0px;
+  display: inline-block;
+  vertical-align: text-top;
+}
+
+.stash-wrapper img {
+  height: 190px;
+  margin-bottom: 15px;
+}
+
+.stash-wrapper .text {
+  width: 190px;
+  text-align: left;
+  padding-left: 15px;
+}
+
+.stash-brand p {
+  font-family: 'robotoblack';
+  font-size: 13px;
+  margin-bottom: 0px;
+}
+
+.stash-name p {
+  font-family: 'robotoregular';
+  font-size: 12px;
+  margin-bottom: 0px;
+
+}
+
+.stash-price p {
+  font-family: 'robotolight';
+  font-size: 12px;
+  margin-bottom: 0px;
+
+}
+
+/* Right Column Styling*/
+
+.col-right {
+  width: 245px;
+  float: left;
+  text-align: center;
+}
+
+.sidebar-header.show {
+  background-color: white;
+  width: 245px;
+  height: 80px;
+  border: 9px solid black;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.sidebar-header.show h1 {
+  font-family: 'trackregular';
+  margin-top: 15px;
+  padding: 0px;
+  color: black;
+  font-size: 35px;
+}
+
+.tag-wrapper.show {
+  border: 1px solid #aaa;
+  width: 235px;
+  margin-top: 10px;
+  position: static;
+  text-align: center;
+  border-radius: 2px;
+  clear: none;
+  margin-left: 10px;
+}
+
+.tag-wrapper.show img {
+  width: 205px;
+  padding: 5px;
+  padding-top: 15px;
+}
+
+.tag-desc p {
+  font-family: 'robotoregular';
+  font-size: 14px;
+  margin-bottom: 5px;
+}
