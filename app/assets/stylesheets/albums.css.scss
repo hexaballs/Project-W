@@ -31,7 +31,7 @@
   margin-top: 0px;
   margin-bottom: 0px;
   color: white;
-  font-size: 40px;
+  font-size: 30px;
 }
 
 .main-tag-wrapper.show {
@@ -188,8 +188,17 @@
   padding-top: 15px;
 }
 
+.tag-desc {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
 .tag-desc p {
   font-family: 'robotoregular';
-  font-size: 14px;
+  font-size: 13px;
   margin-bottom: 5px;
+}
+
+.tag-desc a {
+  text-decoration: none;
 }

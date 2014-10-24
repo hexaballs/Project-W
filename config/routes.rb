@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  get 'albums/show'
+  get 'albums/show/:id' => 'albums#show'
 
   resources :users
   # The priority is based upon order of creation: first created -> highest priority.

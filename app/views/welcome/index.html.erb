@@ -38,10 +38,10 @@
       <% array_section.each do |album| %>
       <div class="tag-wrapper">
         <div class="tag-image">
-            <%= link_to image_tag(album.img_url), album.link_url, :target => "_blank" %>
+            <%= link_to image_tag(album.img_url), :controller => "albums", :action => "show", :id => album.id, :target => "_blank" %>
         </div>
         <div class="tag-link">
-          <p><%= album.look_title %></p>
+          <p><%= link_to album.look_title, :controller => "albums", :action => "show", :id => album.id, :target => "_blank" %></p>
         </div>
       </div>
       <% end %>

@@ -294,6 +294,15 @@
   background-color: black;
 }
 
+.name a {
+  text-decoration: none;
+  color: white;
+}
+
+.name a:hover {
+  color: #333;
+}
+
 .quote h2 {
   font-family: 'trackregular', sans-serif;
   text-align: center;
