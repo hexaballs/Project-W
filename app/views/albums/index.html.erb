@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-10 col-sm-offset-1">
+<% @albums.each do |album| %>
+
+      <div class="album-wrapper">
+        <div class="img-wrapper">
+          <div class="controls">
+            <p>
+              | <%= link_to "Edit", edit_album_path(album) %> |
+              <%= link_to "Destroy", album, :confirm => "Are you sure?", :method => :delete %> |
+            </p>
+          </div>
+          <div class="album-image">
+            <%= link_to image_tag(album.img_url), :controller => "albums", :action => "show", :id => album.id %>
+          </div>
+          <div class="album-img-url">
+            <p class="link"><%= album.img_url %></p>
+          </div>
+        </div>
+        <div class="desc-wrapper">
+          <div class="album-look-type">
+            <h1><%= album.look_type %></h1>
+          </div>
+          <div class="album-look-desc">
+            <p class="title">Look Description: </p>
+            <p><%= album.look_desc %></p>
+          </div>
+          <div class="album-source">
+            <p class="title">Source: </p>
+            <p><%= album.link_name %></p>
+            <p class="link"><%= album.link_url %></p>
+          </div>
+        </div>
+      </div>
+<% end %>
+    </div>
+  </div>
+</div>

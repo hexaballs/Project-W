@@ -13,9 +13,15 @@
     <div>
       <div class="mid-hr"><hr></div>
       <ul class="mid-menu">
-        <li><a href="#">All</a></li>
-        <% @menu_items.each_with_index do |m, i| %>
-        <li><a href="#"><%= m %></a></li>
+        <li class="menu-item">
+          <div class="hover-menu"></div>
+          <a href="#" class="all">All</a>
+        </li>
+        <% @menu_items.each do |m| %>
+        <li class="menu-item">
+          <div class="hover-menu"></div>
+          <%= link_to m, "#", class: m.downcase %>
+        </li>
         <% end %>
       </ul>
       <div class="mid-hr"><hr></div>
@@ -36,12 +42,12 @@
     <div class="col">
 
       <% array_section.each do |album| %>
-      <div class="tag-wrapper">
+      <div class="tag-wrapper all <%= album.look_type.downcase %>">
         <div class="tag-image">
-            <%= link_to image_tag(album.img_url), :controller => "albums", :action => "show", :id => album.id, :target => "_blank" %>
+            <%= link_to image_tag(album.img_url), :controller => "albums", :action => "show", :id => album.id %>
         </div>
         <div class="tag-link">
-          <p><%= link_to album.look_title, :controller => "albums", :action => "show", :id => album.id, :target => "_blank" %></p>
+          <p><%= link_to album.look_title, :controller => "albums", :action => "show", :id => album.id %></p>
         </div>
       </div>
       <% end %>

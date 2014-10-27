@@ -55,6 +55,7 @@
   text-align: center;
   border-radius: 2px;
   clear: none;
+  display: none;
 }
 
 .tag-wrapper img {
@@ -75,4 +76,18 @@
 
 .tag-link a {
   text-decoration: none;
+}
+
+
+.hover-menu {
+  height: 8px;
+  background-color: white;
+}
+
+.menu-item .hover-menu {
+  transition: all 500ms ease-out;
+}
+
+.menu-item:hover .hover-menu {
+  background-color: black;
 }

@@ -14,7 +14,7 @@
     <!-- header starts here -->
     <div class="row">
       <div class="header col-sm-10 col-sm-offset-1">
-        <div class="name"><%= link_to "Trove", { :controller => "welcome", :Action => "index" }, :class => "logo" %></div>
+        <div class="name"><%= link_to "Trove", { :controller => "welcome", :action => "index" }, :class => "logo" %></div>
         <div class="quote">
           <h2>Be careless in your dress if you will, but keep a tidy soul. <span class="quote-author">- <a href="http://en.wikipedia.org/wiki/Mark_Twain" target="_blank">Mark Twain</a><span></h2>
         </div>
@@ -24,6 +24,7 @@
           <li><a href="#">New</a></li>
           <li><a href="#">Men</a></li>
           <li><a href="#">Women</a></li>
+          <li><%= link_to 'Create', :controller => "albums", :action => "new" %></li>
         </ul>
       </div>
     </div>

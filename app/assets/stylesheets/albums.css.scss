@@ -202,3 +202,79 @@
 .tag-desc a {
   text-decoration: none;
 }
+
+.album-image img {
+  width: 190px;
+}
+
+.album-wrapper {
+  float: left;
+  margin-right: 10px;
+}
+
+.img-wrapper {
+  width: 220px;
+  height: 380px;
+  float: left;
+  border: 1px solid #aaa;
+  text-align: center;
+  padding: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.desc-wrapper {
+  width: 240px;
+  height: 380px;
+  float: left;
+  padding: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #aaa;
+  border-left: 0px;
+}
+
+
+
+.album-look-type {
+  background-color: black;
+}
+
+.album-look-type h1 {
+  color: white;
+  font-family: 'robotomedium';
+  padding: 5px;
+  margin: 0px;
+}
+
+.album-look-desc p {
+  font-family: 'robotoregular';
+  font-size: 14px;
+  margin: 0px;
+  padding-left: 5px;
+
+}
+
+.album-source p {
+  font-family: 'robotoregular';
+  font-size: 14px;
+  margin: 0px;
+  padding-left: 5px;
+
+}
+
+.title {
+  font-size: 20px !important;
+  font-weight: bold;
+  font-family: 'robotoblack';
+}
+
+p.title {
+  margin-top: 10px;
+  padding-left: 5px;
+}
+
+p.link {
+  margin-top: 20px;
+  font-size: 1px;
+}

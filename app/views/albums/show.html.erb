@@ -19,6 +19,14 @@
               <p>Spotted on <%= link_to @album.link_name, @album.link_url, :class => "tag-link-page-header",:target => "_blank" %></p>
             </div>
 
+            <div class="controls">
+              <p>
+                <%= link_to "Edit", edit_album_path(@album) %> |
+                <%= link_to "Destroy", @album, :confirm => "Are you sure?", :method => :delete %> |
+                <%= link_to "View All", albums_path %>
+              </p>
+            </div>
+
             <div class="mid-hr show"><hr></div>
 <!-- Top Products -->
             <div class="category show">
@@ -115,62 +123,6 @@
             </div>
           </div>
           <% end %>
-
-<!--           <div class="tag-wrapper show">
-            <div class="tag-image show">
-              <a href="#">
-                <img src="http://41.media.tumblr.com/9e1ec9332766447fa2af8c03c0431f1b/tumblr_mzm90gcUT61sfb7xio1_1280.jpg">
-              </a>
-            </div>
-            <div class="tag-desc show">
-              <p>#thelook</p>
-            </div>
-          </div>
-
-          <div class="tag-wrapper show">
-            <div class="tag-image show">
-              <a href="#">
-                <img src="http://3.bp.blogspot.com/_PLdSAZhCBv0/TFEsW9oUnwI/AAAAAAAAAG4/p9YvH3GDqUI/s1600/pittigelato.jpg">
-              </a>
-            </div>
-            <div class="tag-desc show">
-              <p>#thelook</p>
-            </div>
-          </div>
-
-          <div class="tag-wrapper show">
-            <div class="tag-image show">
-              <a href="#">
-                <img src="http://le-21eme.com/wp-content/uploads/2012/10/2585-Le-21eme-Adam-Katz-Sinding-Billy-Nigel-SoHo_D4A6191.jpg">
-              </a>
-            </div>
-            <div class="tag-desc show">
-              <p>#thelook</p>
-            </div>
-          </div>
-
-          <div class="tag-wrapper show">
-            <div class="tag-image show">
-              <a href="#">
-                <img src="http://i52.tinypic.com/10x95pg.jpg">
-              </a>
-            </div>
-            <div class="tag-desc">
-              <p>#thelook</p>
-            </div>
-          </div>
-
-          <div class="tag-wrapper show">
-            <div class="tag-image show">
-              <a href="#">
-                <img src="http://www.itslavida.com/files/2014/06/2.png">
-              </a>
-            </div>
-            <div class="tag-desc">
-              <p>#thelook</p>
-            </div>
-          </div> -->
-
         </div>
 
 
