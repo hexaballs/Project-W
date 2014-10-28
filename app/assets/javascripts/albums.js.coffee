@@ -10,9 +10,9 @@ $ ->
     thisClass = $(e.target).text().toLowerCase()
     console.log thisClass
     e.preventDefault()
-    $(".slider").slideUp()
+    $(".slider").slideUp(300)
     $(".tag-wrapper").fadeOut(300)
-    $(".#{thisClass}").delay(300).fadeIn(600)
+    $(".#{thisClass}").delay(300).fadeIn(300)
 
 
   # $(".all").click (e) ->

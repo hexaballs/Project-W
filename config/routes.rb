@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :references
+
   resources :users
   resources :albums
   get 'albums/show/:id' => 'albums#show'
