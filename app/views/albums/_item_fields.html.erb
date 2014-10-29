@@ -50,11 +50,9 @@
 
   <div class="field">
     <%= f.label :item_desc, "Product Description", class: "description" %>
-    <%= f.text_field :item_desc, class: "description" %>
+    <%= f.text_area :item_desc, class: "description" %>
   </div>
 
-  <div class="destroy-field">
-    <%= f.hidden_field :_destroy %>
-    <%= link_to "Remove", "#", class: "remove_fields" %>
-  </div>
+  <%= f.link_to_remove "Remove" %>
+
 </div>

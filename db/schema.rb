@@ -24,21 +24,8 @@ ActiveRecord::Schema.define(version: 20141028034511) do
     t.string   "link_name"
   end
 
-  create_table "food_items", force: true do |t|
-    t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "picture"
-  end
-
 # Could not dump table "items" because of following NoMethodError
 #   undefined method `[]' for nil:NilClass
-
-  create_table "look_types", force: true do |t|
-    t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
 
   create_table "references", force: true do |t|
     t.string   "name"

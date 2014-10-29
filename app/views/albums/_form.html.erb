@@ -1,7 +1,7 @@
 <div>
   <%= link_to 'Back', albums_path %>
 </div>
-<%= form_for(@album) do |f| %>
+<%= nested_form_for @album do |f| %>
 <div class="album-wrapper">
   <% if @album.errors.any? %>
     <div id="error_explanation">
@@ -46,21 +46,21 @@
 
   <div class="field">
     <%= f.label :look_desc, "Description", class: "description" %><br />
-    <%= f.text_field :look_desc, class: "description"  %>
+    <%= f.text_area :look_desc, class: "description"  %>
   </div>
 
   <div class="action">
     <%= f.submit "CREATE" %>
   </div>
-
 </div>
 
 <div class="items-wrapper">
-      <%= link_to_add_fields "ADD PRODUCT SUGGESTIONS", f, :items %>
+  <p><%= f.link_to_add "ADD PRODUCT SUGGESTIONS", :items %></p>
 
-      <%= f.fields_for :items do |builder|%>
-        <%= render 'item_fields', f: builder %>
-      <% end %>
+  <%= f.fields_for :items do |items_form| %>
+    <%= render 'item_fields', f: items_form %>
+  <% end %>
+
 </div>
 
   <% end %>

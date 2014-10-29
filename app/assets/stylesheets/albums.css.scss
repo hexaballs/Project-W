@@ -310,10 +310,10 @@ p.link {
   margin: 0px;
 }
 
-a.add_fields {
+a.add_nested_fields {
   text-decoration: none;
   color: white;
-  font-family: 'robotomedium';
+  font-family: 'robotoregular';
   background-color: black;
   padding: 10px;
   margin-left: 53px;
@@ -343,7 +343,6 @@ a.add_fields {
 // }
 
 input {
-
   height: 30px;
   width: 428px;
   border-radius: 12px;
@@ -352,9 +351,8 @@ input {
 
 textarea {
   display: inline-block;
-  float: right;
   height: 90px;
-  width: 250px;
+  width: 428px;
   border-radius: 12px;
 }
 
@@ -389,8 +387,4 @@ textarea {
   width: 426px;
   background-color: black;
   text-align: center;
-}
-
-input.description {
-  height: 100px;
 }

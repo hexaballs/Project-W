@@ -25,7 +25,7 @@ class AlbumsController < ApplicationController
   # GET /albums/new
   def new
     @album = Album.new
-    3.times { @album.items.build }
+    1.times { @album.items.build }
   end
 
   # GET /albums/1/edit
@@ -81,7 +81,7 @@ class AlbumsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def allowed_params_album
-      params.require(:album).permit(:look_type, :look_title, :look_desc, :img_url, :link_url, :link_name, items_attributes: [:id, :name, :brand, :us_price, :item_desc, :item_type, :defining_color, :defining_texture, :img_url, :link_url, :item_class, :album_id, :_destroy])
+      params.require(:album).permit(:look_type, :look_title, :look_desc, :img_url, :link_url, :link_name, items_attributes: [:id, :name, :brand, :us_price, :item_desc, :item_type, :defining_color, :defining_texture, :img_url, :link_url, :item_class, :_destroy])
     end
 end
 
