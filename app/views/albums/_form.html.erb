@@ -49,7 +49,6 @@
     <%= f.text_field :look_desc, class: "description"  %>
   </div>
 
-
   <div class="action">
     <%= f.submit "CREATE" %>
   </div>
@@ -57,11 +56,11 @@
 </div>
 
 <div class="items-wrapper">
-  <%= link_to_add_fields "ADD PRODUCT SUGGESTIONS", f, :items %>
+      <%= link_to_add_fields "ADD PRODUCT SUGGESTIONS", f, :items %>
 
-  <%= f.fields_for :items do |builder|%>
-    <%= render 'item_fields', f: builder %>
-  <% end %>
+      <%= f.fields_for :items do |builder|%>
+        <%= render 'item_fields', f: builder %>
+      <% end %>
 </div>
 
-<% end %>
+  <% end %>
