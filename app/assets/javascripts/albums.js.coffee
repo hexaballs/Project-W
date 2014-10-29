@@ -3,27 +3,13 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 $ ->
-  # $(".mid-menu li a").click (e) ->
-  #   e.preventDefault()
+  $('form').on 'click', '.remove_fields', (event) ->
+    $(this).prev('input[type=hidden]').val('1')
+    $(this).closest('.fields').hide()
+    event.preventDefault()
 
-  $(".mid-menu").click (e) ->
-    thisClass = $(e.target).text().toLowerCase()
-    console.log thisClass
-    e.preventDefault()
-    $(".slider").slideUp(300)
-    $(".tag-wrapper").fadeOut(300)
-    $(".#{thisClass}").delay(300).fadeIn(300)
-
-
-  # $(".all").click (e) ->
-  #   e.preventDefault()
-  #   console.log "clicked"
-  #   $(".slider").slideUp()
-  #   $(".tag-wrapper").fadeIn("slow")
-
-  # $(".biker").click (e) ->
-  #   e.preventDefault()
-  #   console.log $(this).attr('class')
-  #   $(".slider").slideUp()
-  #   $(".tag-wrapper").fadeOut()
-  #   $(".tag-wrapper.biker").fadeToggle()
+  $('form').on 'click', '.add_fields', (event) ->
+    time = new Date().getTime()
+    regexp = new RegExp($(this).data('id'), 'g')
+    $(this).after($(this).data('fields').replace(regexp, time))
+    event.preventDefault()

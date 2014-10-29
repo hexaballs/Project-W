@@ -2,6 +2,12 @@
   <div class="header col-sm-10 col-sm-offset-1">
     <div class="jumbotron show">
 
+    <div>
+      <%= link_to 'Edit', edit_album_path(@album) %> |
+      <%= link_to "Destroy", @album, method: :delete, data: { confirm: 'Are you sure?' } %> |
+      <%= link_to "View All", albums_path %>
+    </div>
+
       <div class="header-wrapper show">
 
         <div class="col-left">
@@ -17,14 +23,6 @@
             </div>
             <div class="main-tag-link show">
               <p>Spotted on <%= link_to @album.link_name, @album.link_url, :class => "tag-link-page-header",:target => "_blank" %></p>
-            </div>
-
-            <div class="controls">
-              <p>
-                <%= link_to "Edit", edit_album_path(@album) %> |
-                <%= link_to "Destroy", @album, :confirm => "Are you sure?", :method => :delete %> |
-                <%= link_to "View All", albums_path %>
-              </p>
             </div>
 
             <div class="mid-hr show"><hr></div>

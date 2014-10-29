@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141024105041) do
+ActiveRecord::Schema.define(version: 20141028034511) do
 
   create_table "albums", force: true do |t|
     t.string   "look_type"
@@ -36,6 +36,13 @@ ActiveRecord::Schema.define(version: 20141024105041) do
 
   create_table "look_types", force: true do |t|
     t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "references", force: true do |t|
+    t.string   "name"
+    t.integer  "age"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

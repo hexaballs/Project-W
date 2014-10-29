@@ -1,0 +1,67 @@
+<div>
+  <%= link_to 'Back', albums_path %>
+</div>
+<%= form_for(@album) do |f| %>
+<div class="album-wrapper">
+  <% if @album.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@album.errors.count, "error") %> prohibited this album from being saved:</h2>
+
+      <ul>
+      <% @album.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="album-details">
+    <h2>ALBUM DEFINITION</h2>
+  </div>
+
+  <div class="field">
+    <%= f.label :img_url, "Image Link" %><br />
+    <%= f.url_field :img_url, class: "input" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :look_title, "Title" %><br />
+    <%= f.text_field :look_title, class: "input"  %>
+  </div>
+
+  <div class="field">
+    <%= f.label :look_type, "Category" %><br />
+    <%= f.text_field :look_type, class: "input" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :link_name, "Source Name" %><br />
+    <%= f.text_field :link_name, class: "input"  %>
+  </div>
+
+  <div class="field">
+    <%= f.label :link_url, "Source Link"%><br />
+    <%= f.url_field :link_url, class: "input"  %>
+  </div>
+
+  <div class="field">
+    <%= f.label :look_desc, "Description", class: "description" %><br />
+    <%= f.text_field :look_desc, class: "description"  %>
+  </div>
+
+
+  <div class="action">
+    <%= f.submit "CREATE" %>
+  </div>
+
+</div>
+
+<div class="items-wrapper">
+  <%= link_to_add_fields "ADD PRODUCT SUGGESTIONS", f, :items %>
+
+  <%= f.fields_for :items do |builder|%>
+    <%= render 'item_fields', f: builder %>
+  <% end %>
+</div>
+
+<% end %>

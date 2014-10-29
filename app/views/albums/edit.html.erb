@@ -1,59 +1,6 @@
-<%= form_for @album do |f| %>
+<h1>Editing album</h1>
 
-  <%= f.label :look_type %>
-  <%= f.text_field :look_type %> <br />
+<%= render 'form' %>
 
-  <%= f.label :img_url %>
-  <%= f.text_field :img_url %> <br />
-
-  <%= f.label :look_title %>
-  <%= f.text_field :look_title %> <br />
-
-  <%= f.label :look_desc %>
-  <%= f.text_field :look_desc %> <br />
-
-  <%= f.label :link_name %>
-  <%= f.text_field :link_name %> <br />
-
-  <%= f.label :link_url %>
-  <%= f.text_field :link_url %> <br />
-
-  <p>------</p>
-
-  <%= f.fields_for :items do |builder|%>
-    <%= builder.label :name %>
-    <%= builder.text_field :name %> <br />
-
-    <%= builder.label :brand %>
-    <%= builder.text_field :brand %> <br />
-
-    <%= builder.label :us_price %>
-    <%= builder.text_field :us_price %> <br />
-
-    <%= builder.label :item_desc %>
-    <%= builder.text_field :item_desc %> <br />
-
-    <%= builder.label :item_type %>
-    <%= builder.text_field :item_type %> <br />
-
-    <%= builder.label :defining_color %>
-    <%= builder.text_field :defining_color %> <br />
-
-    <%= builder.label :defining_texture %>
-    <%= builder.text_field :defining_texture %> <br />
-
-    <%= builder.label :img_url %>
-    <%= builder.text_field :img_url %> <br />
-
-    <%= builder.label :link_url %>
-    <%= builder.text_field :link_url %> <br />
-
-    <%= builder.label :item_class %>
-    <%= builder.text_field :item_class %> <br />
-
-    <p>---</p>
-  <% end %>
-
-  <%= f.submit %>
-
-<% end %>
+<%= link_to 'Show', @album %> |
+<%= link_to 'Back', albums_path %>

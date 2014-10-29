@@ -1,0 +1,60 @@
+<div class="fields fields-wrapper">
+  <div class="album-details">
+    <h2>PRODUCT SUGGESTION</h2>
+  </div>
+
+  <div class="field">
+    <%= f.label :item_class, "Category" %>
+    <%= f.text_field :item_class %>
+  </div>
+
+  <div class="field">
+    <%= f.label :img_url, "Product Image Link" %>
+    <%= f.url_field :img_url %>
+  </div>
+
+  <div class="field">
+    <%= f.label :link_url, "Source Link" %>
+    <%= f.url_field :link_url %>
+  </div>
+
+  <div class="field">
+    <%= f.label :name, "Product Name" %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :brand %>
+    <%= f.text_field :brand %>
+  </div>
+
+  <div class="field">
+    <%= f.label :us_price, "US$ Price" %>
+    <%= f.text_field :us_price %>
+  </div>
+
+  <div class="field">
+    <%= f.label :item_type, "Product Type" %>
+    <%= f.text_field :item_type %>
+  </div>
+
+  <div class="field">
+    <%= f.label :defining_color, "Defining Color" %>
+    <%= f.text_field :defining_color %>
+  </div>
+
+  <div class="field">
+    <%= f.label :defining_texture, "Defining Texture" %>
+    <%= f.text_field :defining_texture %>
+  </div>
+
+  <div class="field">
+    <%= f.label :item_desc, "Product Description", class: "description" %>
+    <%= f.text_field :item_desc, class: "description" %>
+  </div>
+
+  <div class="destroy-field">
+    <%= f.hidden_field :_destroy %>
+    <%= link_to "Remove", "#", class: "remove_fields" %>
+  </div>
+</div>
