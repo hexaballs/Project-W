@@ -21,9 +21,7 @@
         <!-- menu bar starts here -->
         <div class="top-hr"><hr></div>
         <ul class="main-menu">
-          <li><a href="#">New</a></li>
-          <li><a href="#">Men</a></li>
-          <li><a href="#">Women</a></li>
+          <li><%= link_to "All", :controller => "albums", :action => "index" %></li>
           <li><%= link_to 'Create', :controller => "albums", :action => "new" %></li>
         </ul>
       </div>

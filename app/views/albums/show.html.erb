@@ -2,11 +2,6 @@
   <div class="header col-sm-10 col-sm-offset-1">
     <div class="jumbotron show">
 
-    <div>
-      <%= link_to 'Edit', edit_album_path(@album) %> |
-      <%= link_to "Destroy", @album, method: :delete, data: { confirm: 'Are you sure?' } %> |
-      <%= link_to "View All", albums_path %>
-    </div>
 
       <div class="header-wrapper show">
 
@@ -14,6 +9,12 @@
 
           <div class="tag-header show">
             <h1><%= @album.look_title %></h1>
+          </div>
+
+          <div class="controls">
+              <%= link_to 'Edit', edit_album_path(@album) %> |
+              <%= link_to "Destroy", @album, method: :delete, data: { confirm: 'Are you sure?' } %> |
+              <%= link_to "View All", albums_path %>
           </div>
 
           <div class="main-tag-wrapper show">
@@ -26,71 +27,131 @@
             </div>
 
             <div class="mid-hr show"><hr></div>
+
+
+            <% num_per_div = 3.0 %>
+            <% div_width = 628 %>
+
+            <% total_tops = @tops.count.to_f %>
+            <% total_div_tops = (total_tops / num_per_div).ceil %>
+            <% total_width_tops = total_div_tops * div_width %>
+
 <!-- Top Products -->
             <div class="category show">
               <p>Tops</p>
             </div>
 
-            <div class="stash-container show">
+            <div>
+              <p class="left-toggle top"><</p>
+              <p class="right-toggle top">></p>
+            </div>
+
+            <div class="stash-container-tops show">
 
               <% @tops.each do |item| %>
-              <div class="stash-wrapper">
-                <a href=<%= item.link_url %>><img src=<%= item.img_url %>></a>
-                <div class="stash-brand text">
-                  <p><%= item.brand %></p>
+              <div class="stash-wrapper-window-tops" style="width:<%= total_width_tops %>px">
+
+                <div class="stash-wrapper">
+
+                  <a href=<%= item.link_url %>><img src=<%= item.img_url %>></a>
+
+                  <div class="stash-brand text">
+                    <p><%= item.brand %></p>
+                  </div>
+
+                  <div class="stash-name text">
+                    <p><%= item.name %></p>
+                  </div>
+
+                  <div class="stash-price text">
+                    <p>US$<%= item.us_price %></p>
+                  </div>
+
                 </div>
-                <div class="stash-name text">
-                  <p><%= item.name %></p>
-                </div>
-                <div class="stash-price text">
-                  <p>$<%= item.us_price %></p>
-                </div>
+
               </div>
               <% end %>
 
             </div>
 
+
+            <% total_bottoms = @bottoms.count.to_f %>
+            <% total_div_bottoms = (total_bottoms / num_per_div).ceil %>
+            <% total_width_bottoms = total_div_bottoms * div_width %>
 <!-- Bottom product -->
             <div class="category show">
               <p>Bottoms</p>
             </div>
-            <div class="stash-container show">
+
+            <div>
+              <p class="left-toggle bottom"><</p>
+              <p class="right-toggle bottom">></p>
+            </div>
+
+            <div class="stash-container-bottoms show">
 
               <% @bottoms.each do |item| %>
-              <div class="stash-wrapper">
-                <a href=<%= item.link_url %>><img src=<%= item.img_url %>></a>
-                <div class="stash-brand text">
-                  <p><%= item.brand %></p>
+              <div class="stash-wrapper-window-bottoms" style="width:<%= total_width_bottoms %>px">
+
+                <div class="stash-wrapper">
+
+                  <a href=<%= item.link_url %>><img src=<%= item.img_url %>></a>
+
+                  <div class="stash-brand text">
+                    <p><%= item.brand %></p>
+                  </div>
+
+                  <div class="stash-name text">
+                    <p><%= item.name %></p>
+                  </div>
+
+                  <div class="stash-price text">
+                    <p>US$<%= item.us_price %></p>
+                  </div>
+
                 </div>
-                <div class="stash-name text">
-                  <p><%= item.name %></p>
-                </div>
-                <div class="stash-price text">
-                  <p>$<%= item.us_price %></p>
-                </div>
+
               </div>
               <% end %>
 
             </div>
 
+            <% total_doodads = @doodads.count.to_f %>
+            <% total_div_doodads = (total_doodads / num_per_div).ceil %>
+            <% total_width_doodads = total_div_doodads * div_width %>
 <!-- Doodad products -->
             <div class="category show">
               <p>Doodads</p>
             </div>
-            <div class="stash-container show">
+
+            <div>
+              <p class="left-toggle doodad"><</p>
+              <p class="right-toggle doodad">></p>
+            </div>
+
+            <div class="stash-container-doodads show">
 
               <% @doodads.each do |item| %>
-              <div class="stash-wrapper">
-                <a href=<%= item.link_url %>><img src=<%= item.img_url %>></a>
-                <div class="stash-brand text">
-                  <p><%= item.brand %></p>
+              <div class="stash-wrapper-window-doodads" style="width:<%= total_width_doodads %>px">
+
+                <div class="stash-wrapper">
+
+                  <a href=<%= item.link_url %>><img src=<%= item.img_url %>></a>
+
+                  <div class="stash-brand text">
+                    <p><%= item.brand %></p>
+                  </div>
+
+                  <div class="stash-name text">
+                    <p><%= item.name %></p>
+                  </div>
+
+                  <div class="stash-price text">
+                    <p>US$<%= item.us_price %></p>
+                  </div>
+
                 </div>
-                <div class="stash-name text">
-                  <p><%= item.name %></p>
-                </div>
-                <div class="stash-price text">
-                  <p>$<%= item.us_price %></p>
-                </div>
+
               </div>
               <% end %>
 
@@ -128,4 +189,5 @@
         </div>
     </div>
   </div>
+</div>
 </div>

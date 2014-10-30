@@ -17,9 +17,13 @@
     <h2>ALBUM DEFINITION</h2>
   </div>
 
+  <% if f.object.img_url.present?%>
+      <%= image_tag f.object.img_url, height: '150' %>
+  <% end %>
+
   <div class="field">
-    <%= f.label :look_type, "Category" %><br />
-    <%= f.select :look_type, options_for_select(Album.all.pluck(:look_type).uniq.sort) %>
+    <%= f.label :category_id, "Category" %><br />
+    <%= f.collection_select :category_id, Category.all, :id, :name %>
   </div>
 
   <div class="field">
@@ -48,7 +52,7 @@
   </div>
 
   <div class="action">
-    <%= f.submit "CREATE" %>
+    <%= f.submit "SUBMIT" %>
   </div>
 </div>
 

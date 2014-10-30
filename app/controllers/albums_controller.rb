@@ -12,8 +12,8 @@ class AlbumsController < ApplicationController
   def show
     # will have template
     @album = Album.find_by(id: params[:id])
-    @category = @album.look_type
-    @shuffled_album = Album.all.where(look_type: @category).shuffle
+    @category = Category.find_by(id: @album.category_id).name
+    @shuffled_album = Album.all.where(category_id: @album.category_id).shuffle
 
 
     @album_items = Album.find_by(id: params[:id]).items
@@ -82,7 +82,7 @@ class AlbumsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def allowed_params_album
-      params.require(:album).permit(:look_type, :look_title, :look_desc, :img_url, :link_url, :link_name, items_attributes: [:id, :name, :brand, :us_price, :item_desc, :item_type, :defining_color, :defining_texture, :img_url, :link_url, :item_class, :_destroy])
+      params.require(:album).permit(:look_type, :look_title, :look_desc, :img_url, :link_url, :link_name, :category_id, items_attributes: [:id, :name, :brand, :us_price, :item_desc, :item_type, :defining_color, :defining_texture, :img_url, :link_url, :item_class, :_destroy])
     end
 end
 

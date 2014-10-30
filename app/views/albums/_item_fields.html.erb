@@ -3,9 +3,13 @@
     <h2>PRODUCT SUGGESTION</h2>
   </div>
 
+  <% if f.object.img_url.present?%>
+      <%= image_tag f.object.img_url, height: '150' %>
+  <% end %>
+
   <div class="field">
     <%= f.label :item_class, "Category" %>
-    <%= f.select :item_class, options_for_select(%W(Tops Bottoms Doodads)) %>
+    <%= f.select :item_class, options_for_select(%W(Tops Bottoms Doodads), selected: f.object.item_class) %> <!-- need to use .object to make f into something accessible -->
   </div>
 
   <div class="field">

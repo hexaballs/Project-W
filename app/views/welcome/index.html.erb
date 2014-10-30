@@ -52,7 +52,7 @@
     <div class="col">
 
       <% array_section.each do |album| %>
-      <div class="tag-wrapper all <%= album.look_type.downcase %>">
+      <div class="tag-wrapper all <%= Category.find_by(id: album.category_id).name.downcase %>">
         <div class="tag-image">
           <%= link_to image_tag(album.img_url), :controller => "albums", :action => "show", :id => album.id %>
           <span class="caption  scale-caption">

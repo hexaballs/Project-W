@@ -1,7 +1,7 @@
 
 <div class="row">
-  <div class="new-album col-sm-10 col-sm-offset-1">
-    <%= link_to 'New Album', new_album_path %>
+  <div class="new-album header col-sm-10 col-sm-offset-1">
+    <%= link_to 'New Album', new_album_path, class: "new-album-tag" %>
   </div>
   <div class="col-sm-10 col-sm-offset-1">
 
@@ -25,7 +25,7 @@
       </div>
       <div class="desc-wrapper">
         <div class="album-look-type">
-          <h1><%= album.look_type %></h1>
+          <h1><%= album.category.name %></h1>
         </div>
         <div class="album-look-desc">
           <p class="title">Look Description: </p>
