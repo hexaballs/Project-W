@@ -5,5 +5,5 @@ class Album < ActiveRecord::Base
       :reject_if => lambda { |a| a[:item_class].blank? or a[:img_url].blank? },
       :allow_destroy => true
     }
-  # validates_presence_of :img_url, :look_title, :look_type
+  validates_presence_of :img_url, :look_title, :look_type
 end
