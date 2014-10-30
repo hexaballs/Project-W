@@ -1,9 +1,19 @@
 <div class="row">
   <div class="header col-sm-10 col-sm-offset-1">
     <div class="jumbotron">
-      <div class="slider">
-        <%= image_tag @album[0].img_url %>
+
+      <div class="slider-header">
+        <div class="slider">
+          <% slider_album = @shuffled_album.sample(6) %>
+          <% slider_album.each do |a| %>
+          <div class="img-size">
+            <%= image_tag a.img_url, class: "slide-img" %>
+          </div>
+          <% end %>
+
+        </div>
       </div>
+
     </div>
   </div>
 </div>
@@ -44,7 +54,10 @@
       <% array_section.each do |album| %>
       <div class="tag-wrapper all <%= album.look_type.downcase %>">
         <div class="tag-image">
-            <%= link_to image_tag(album.img_url), :controller => "albums", :action => "show", :id => album.id %>
+          <%= link_to image_tag(album.img_url), :controller => "albums", :action => "show", :id => album.id %>
+          <span class="caption  scale-caption">
+            <h3><%= link_to "+", :controller => "albums", :action => "show", :id => album.id %></h3>
+          </span>
         </div>
         <div class="tag-link">
           <p><%= link_to album.look_title, :controller => "albums", :action => "show", :id => album.id %></p>

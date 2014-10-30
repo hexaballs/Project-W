@@ -171,23 +171,6 @@
   font-size: 35px;
 }
 
-.tag-wrapper.show {
-  border: 1px solid #aaa;
-  width: 235px;
-  margin-top: 10px;
-  position: static;
-  text-align: center;
-  border-radius: 2px;
-  clear: none;
-  margin-left: 10px;
-}
-
-.tag-wrapper.show img {
-  width: 205px;
-  padding: 5px;
-  padding-top: 15px;
-}
-
 .tag-desc {
   margin-left: 10px;
   margin-right: 10px;
@@ -345,15 +328,20 @@ a.add_nested_fields {
 input {
   height: 30px;
   width: 428px;
-  border-radius: 12px;
+  border-radius: 8px;
   padding-left: 5px;
 }
 
 textarea {
-  display: inline-block;
   height: 90px;
   width: 428px;
-  border-radius: 12px;
+  border-radius: 8px;
+}
+
+select {
+  height: 30px;
+  width: 428px;
+  border-radius: 8px;
 }
 
 .album-details h2 {

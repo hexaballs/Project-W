@@ -6,6 +6,6 @@ $ ->
     thisClass = $(e.target).text().toLowerCase()
     console.log thisClass
     e.preventDefault()
-    $(".slider").slideUp(300)
+    $(".slider-header").slideUp(300)
     $(".tag-wrapper").fadeOut(300)
     $(".#{thisClass}").delay(300).fadeIn(300)

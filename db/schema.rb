@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141028034511) do
+ActiveRecord::Schema.define(version: 20141029104741) do
 
   create_table "albums", force: true do |t|
     t.string   "look_type"
@@ -22,6 +22,13 @@ ActiveRecord::Schema.define(version: 20141028034511) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "link_name"
+    t.integer  "category_id"
+  end
+
+  create_table "categories", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 # Could not dump table "items" because of following NoMethodError

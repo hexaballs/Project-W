@@ -3,6 +3,6 @@ class WelcomeController < ApplicationController
     @album = Album.all
     @shuffled_album = Album.all.shuffle
 
-    @menu_items = Album.all.pluck(:look_type).uniq
+    @menu_items = Category.all.pluck(:name).uniq
   end
 end

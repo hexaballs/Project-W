@@ -110,21 +110,22 @@
           </div>
 
           <% album_array = @shuffled_album.slice(0..7) %>
-
-          <% album_array.each do |album| %>
-          <div class="tag-wrapper show">
-            <div class="tag-image show">
-              <%= link_to image_tag(album.img_url), :controller => "albums", :action => "show", :id => album.id %>
+          <div class="col">
+            <% album_array.each do |album| %>
+            <div class="tag-wrapper show">
+              <div class="tag-image show">
+                <%= link_to image_tag(album.img_url), :controller => "albums", :action => "show", :id => album.id %>
+                <span class="caption  scale-caption">
+                  <h3><%= link_to "+", :controller => "albums", :action => "show", :id => album.id %></h3>
+                </span>
+              </div>
+              <div class="tag-desc show">
+                <p><%= link_to album.look_title, :controller => "albums", :action => "show", :id => album.id %></p>
+              </div>
             </div>
-            <div class="tag-desc show">
-              <p><%= link_to album.look_title, :controller => "albums", :action => "show", :id => album.id %></p>
-            </div>
+            <% end %>
           </div>
-          <% end %>
         </div>
-
-
-
     </div>
   </div>
 </div>

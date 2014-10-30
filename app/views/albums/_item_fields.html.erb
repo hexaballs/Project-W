@@ -5,7 +5,7 @@
 
   <div class="field">
     <%= f.label :item_class, "Category" %>
-    <%= f.text_field :item_class %>
+    <%= f.select :item_class, options_for_select(%W(Tops Bottoms Doodads)) %>
   </div>
 
   <div class="field">

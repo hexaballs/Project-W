@@ -1,6 +1,4 @@
-<div>
-  <%= link_to 'Back', albums_path %>
-</div>
+
 <%= nested_form_for @album do |f| %>
 <div class="album-wrapper">
   <% if @album.errors.any? %>
@@ -20,6 +18,11 @@
   </div>
 
   <div class="field">
+    <%= f.label :look_type, "Category" %><br />
+    <%= f.select :look_type, options_for_select(Album.all.pluck(:look_type).uniq.sort) %>
+  </div>
+
+  <div class="field">
     <%= f.label :img_url, "Image Link" %><br />
     <%= f.url_field :img_url, class: "input" %>
   </div>
@@ -27,11 +30,6 @@
   <div class="field">
     <%= f.label :look_title, "Title" %><br />
     <%= f.text_field :look_title, class: "input"  %>
-  </div>
-
-  <div class="field">
-    <%= f.label :look_type, "Category" %><br />
-    <%= f.text_field :look_type, class: "input" %>
   </div>
 
   <div class="field">
