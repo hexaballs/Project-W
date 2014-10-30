@@ -31,8 +31,21 @@ ActiveRecord::Schema.define(version: 20141029104741) do
     t.datetime "updated_at"
   end
 
-# Could not dump table "items" because of following NoMethodError
-#   undefined method `[]' for nil:NilClass
+  create_table "items", force: true do |t|
+    t.string   "name"
+    t.string   "brand"
+    t.float    "us_price"
+    t.text     "item_desc"
+    t.string   "item_type"
+    t.string   "defining_color"
+    t.string   "defining_texture"
+    t.string   "img_url"
+    t.string   "link_url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "item_class"
+    t.integer  "album_id"
+  end
 
   create_table "references", force: true do |t|
     t.string   "name"
