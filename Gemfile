@@ -3,8 +3,6 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
@@ -48,6 +46,9 @@ group :development do
   # Rails console opens pry
   #> https://github.com/rweng/pry-rails
   gem 'pry-rails'
+
+  # Use sqlite3 as the database for Active Record
+  gem 'sqlite3'
 end
 
 group :development, :test do
@@ -55,6 +56,10 @@ group :development, :test do
   gem 'capybara', '~> 2.3.0'
 end
 
+group :production do
+  #use postgresql for production
+  gem 'pg'
+end
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
