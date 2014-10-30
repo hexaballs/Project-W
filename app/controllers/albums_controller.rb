@@ -12,7 +12,8 @@ class AlbumsController < ApplicationController
   def show
     # will have template
     @album = Album.find_by(id: params[:id])
-    @shuffled_album = Album.all.shuffle
+    @category = @album.look_type
+    @shuffled_album = Album.all.where(look_type: @category).shuffle
 
 
     @album_items = Album.find_by(id: params[:id]).items

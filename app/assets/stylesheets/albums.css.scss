@@ -47,6 +47,10 @@
   padding-bottom: 35px;
 }
 
+.tag-wrapper.show {
+  margin-left: 15px;
+}
+
 .main-tag-img.show img {
   width: 700px;
   padding-left: 35px;
@@ -165,10 +169,10 @@
 
 .sidebar-header.show h1 {
   font-family: 'trackregular';
-  margin-top: 15px;
+  margin-top: 20px;
   padding: 0px;
   color: black;
-  font-size: 35px;
+  font-size: 23px;
 }
 
 .tag-desc {
@@ -281,18 +285,6 @@ p.link {
   float: left;
 }
 
-.add-item-wrapper {
-  width: 450px;
-  border: 1px solid #aaa;
-  padding: 10px;
-  margin: 10px;
-  background-color: black;
-}
-
-.add-item-wrapper h2 {
-  margin: 0px;
-}
-
 a.add_nested_fields {
   text-decoration: none;
   color: white;
@@ -307,8 +299,8 @@ a.add_nested_fields {
 }
 
 .items-wrapper {
-  float: left;
-  margin-top: 15px;
+  display: inline-block;
+  margin-top: -20px;
 }
 
 .fields-wrapper {
@@ -316,7 +308,7 @@ a.add_nested_fields {
   border: 1px solid #aaa;
   padding: 10px;
   margin-top: 20px;
-  margin-bottom: 0px;
+  margin-bottom: 30px;
   margin-right: 0px;
   margin-left: 25px;
 }

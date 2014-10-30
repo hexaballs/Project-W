@@ -106,10 +106,10 @@
         <div class="col-right">
 
           <div class="sidebar-header show">
-            <h1>RELATED</h1>
+            <h1><%= @category %></h1>
           </div>
 
-          <% album_array = @shuffled_album.slice(0..7) %>
+          <% album_array = @shuffled_album.slice(0..5) %>
           <!-- <div class="col show"> -->
             <% album_array.each do |album| %>
             <div class="tag-wrapper show">
