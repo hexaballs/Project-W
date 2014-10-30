@@ -11,14 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141029104741) do
+ActiveRecord::Schema.define(version: 20141030072240) do
 
   create_table "albums", force: true do |t|
     t.string   "look_type"
     t.string   "look_title"
     t.text     "look_desc"
-    t.string   "img_url"
-    t.string   "link_url"
+    t.text     "img_url",     limit: 255
+    t.text     "link_url",    limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "link_name"
@@ -39,8 +39,8 @@ ActiveRecord::Schema.define(version: 20141029104741) do
     t.string   "item_type"
     t.string   "defining_color"
     t.string   "defining_texture"
-    t.string   "img_url"
-    t.string   "link_url"
+    t.text     "img_url",          limit: 255
+    t.text     "link_url",         limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "item_class"
