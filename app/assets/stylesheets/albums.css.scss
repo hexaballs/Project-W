@@ -114,6 +114,7 @@ a.tag-link-page-header {
   width: 628px;
   overflow: hidden;
   clear: both;
+  display: none;
 }
 
 .stash-wrapper-window-tops, .stash-wrapper-window-bottoms, .stash-wrapper-window-doodads {
@@ -166,10 +167,12 @@ a.tag-link-page-header {
   font-family: 'robotobold';
   float: left;
   margin-left: 35px;
+  cursor: pointer;
 }
 
 p.left-toggle{
   font-size: 30px;
+  color: white;
 }
 
 .right-toggle {
@@ -177,11 +180,13 @@ p.left-toggle{
   font-family: 'robotobold';
   float: right;
   margin-right: 40px;
-
+  cursor: pointer;
 }
 
 p.right-toggle {
   font-size: 30px;
+  color: white;
+
 }
 
 /* Right Column Styling*/

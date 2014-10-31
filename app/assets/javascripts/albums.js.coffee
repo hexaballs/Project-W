@@ -18,90 +18,129 @@ $ ->
   width = 628
   animationSpeed = 1000
 
-  currentSlideTop = 1
+
+  clicks = 1
   $sliderTop = $(".stash-container-tops")
   $slideContainerTop = $sliderTop.find(".stash-wrapper-window-tops")
+  slideContainerLengthTop = Math.ceil($slideContainerTop.length/3)
 
-  currentSlideBottom = 1
   $sliderBottom = $(".stash-container-bottoms")
   $slideContainerBottom = $sliderBottom.find(".stash-wrapper-window-bottoms")
+  slideContainerLengthBottom = Math.ceil($slideContainerBottom.length/3)
 
-  currentSlideDoodad = 1
   $sliderDoodad = $(".stash-container-doodads")
   $slideContainerDoodad = $sliderDoodad.find(".stash-wrapper-window-doodads")
+  slideContainerLengthDoodad = Math.ceil($slideContainerDoodad.length/3)
+
 
   $("p.right-toggle.top").click (e) ->
     e.preventDefault()
-    if currentSlideTop >= $slideContainerTop.length
+    clicks
+    console.log "clicks = "+clicks
+    console.log "num divs = "+ slideContainerLengthTop
+    if clicks >= slideContainerLengthTop
+      clicks = slideContainerLengthTop
       $slideContainerTop.stop()
     else
       $slideContainerTop.animate
         "margin-left": "-=" + width
-      , animationSpeed, ->
-        currentSlideTop++
-        console.log "$slideContainerTop "+$slideContainerTop.length
-        console.log "currentSlideTop "+currentSlideTop
+      , animationSpeed
+      clicks++
+      console.log "after clicks ="+ clicks
 
   $("p.left-toggle.top").click (e) ->
     e.preventDefault()
-    if currentSlideTop <= $slideContainerTop.length
+    clicks
+    console.log "clicks = "+clicks
+    console.log "num divs = "+ slideContainerLengthTop
+    if clicks <= 1
       $slideContainerTop.stop()
     else
       $slideContainerTop.animate
         "margin-left": "+=" + width
-      , animationSpeed, ->
-        currentSlideTop--
-        console.log "$slideContainerTop "+$slideContainerTop.length
-        console.log "currentSlideTop "+currentSlideTop
+      , animationSpeed
+      clicks--
+      console.log "after clicks ="+ clicks
 
+# -----
 
   $("p.right-toggle.bottom").click (e) ->
     e.preventDefault()
-    if currentSlideBottom >= $slideContainerBottom.length
+    clicks
+    console.log "clicks = "+clicks
+    console.log "num divs = "+ slideContainerLengthBottom
+    if clicks >= slideContainerLengthBottom
+      clicks = slideContainerLengthBottom
       $slideContainerBottom.stop()
     else
       $slideContainerBottom.animate
         "margin-left": "-=" + width
-      , animationSpeed, ->
-        currentSlideBottom++
-        console.log "$slideContainerBottom "+$slideContainerBottom.length
-        console.log "currentSlideBottom "+currentSlideBottom
+      , animationSpeed
+      clicks++
+      console.log "after clicks ="+ clicks
 
   $("p.left-toggle.bottom").click (e) ->
     e.preventDefault()
-    if currentSlideBottom <= $slideContainerBottom.length
+    clicks
+    console.log "clicks = "+clicks
+    console.log "num divs = "+ slideContainerLengthBottom
+    if clicks <= 1
       $slideContainerBottom.stop()
     else
       $slideContainerBottom.animate
         "margin-left": "+=" + width
-      , animationSpeed, ->
-        currentSlideBottom--
-        console.log "$slideContainerBottom "+$slideContainerBottom.length
-        console.log "currentSlideBottom "+currentSlideBottom
+      , animationSpeed
+      clicks--
+      console.log "after clicks ="+ clicks
 
+# ---------
 
 
   $("p.right-toggle.doodad").click (e) ->
     e.preventDefault()
-    if currentSlideDoodad >= $slideContainerDoodad.length
+    clicks
+    console.log "clicks = "+clicks
+    console.log "num divs = "+ slideContainerLengthDoodad
+    if clicks >= slideContainerLengthDoodad
+      clicks = slideContainerLengthDoodad
       $slideContainerDoodad.stop()
     else
       $slideContainerDoodad.animate
         "margin-left": "-=" + width
-      , animationSpeed, ->
-        currentSlideDoodad++
-        console.log "$slideContainerDoodad "+$slideContainerDoodad.length
-        console.log "currentSlideDoodad "+currentSlideDoodad
+      , animationSpeed
+      clicks++
+      console.log "after clicks ="+ clicks
 
   $("p.left-toggle.doodad").click (e) ->
     e.preventDefault()
-    if currentSlideDoodad <= $slideContainerDoodad.length
+    clicks
+    console.log "clicks = "+clicks
+    console.log "num divs = "+ slideContainerLengthDoodad
+    if clicks <= 1
       $slideContainerDoodad.stop()
     else
       $slideContainerDoodad.animate
         "margin-left": "+=" + width
-      , animationSpeed, ->
-        currentSlideDoodad--
-        console.log "$slideContainerDoodad "+$slideContainerDoodad.length
-        console.log "currentSlideDoodad "+currentSlideDoodad
+      , animationSpeed
+      clicks--
+      console.log "after clicks ="+ clicks
 
+
+  $('div.category.top.show').click (e) ->
+    e.preventDefault()
+    $('.stash-container-tops').slideDown()
+    $('p.left-toggle.top').css("color", "black")
+    $('p.right-toggle.top').css("color", "black")
+
+
+  $('div.category.bottom.show').click (e) ->
+    e.preventDefault()
+    $('.stash-container-bottoms').slideDown()
+    $('p.left-toggle.bottom').css("color", "black")
+    $('p.right-toggle.bottom').css("color", "black")
+
+  $('div.category.doodad.show').click (e) ->
+    e.preventDefault()
+    $('.stash-container-doodads').slideDown()
+    $('p.left-toggle.doodad').css("color", "black")
+    $('p.right-toggle.doodad').css("color", "black")

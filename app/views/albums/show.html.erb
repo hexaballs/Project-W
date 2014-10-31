@@ -37,16 +37,18 @@
             <% total_width_tops = total_div_tops * div_width %>
 
 <!-- Top Products -->
-            <div class="category show">
+            <div class="category top show">
               <p>Tops</p>
             </div>
 
-            <div>
-              <p class="left-toggle top"><</p>
-              <p class="right-toggle top">></p>
-            </div>
+            <% if total_div_tops > 1 %>
+              <div class="toggles top">
+                <p class="left-toggle top"><</p>
+                <p class="right-toggle top">></p>
+              </div>
+            <% end %>
 
-            <div class="stash-container-tops show">
+            <div class="stash-container-tops">
 
               <% @tops.each do |item| %>
               <div class="stash-wrapper-window-tops" style="width:<%= total_width_tops %>px">
@@ -79,16 +81,18 @@
             <% total_div_bottoms = (total_bottoms / num_per_div).ceil %>
             <% total_width_bottoms = total_div_bottoms * div_width %>
 <!-- Bottom product -->
-            <div class="category show">
+            <div class="category bottom show">
               <p>Bottoms</p>
             </div>
 
-            <div>
-              <p class="left-toggle bottom"><</p>
-              <p class="right-toggle bottom">></p>
-            </div>
+            <% if total_div_bottoms > 1 %>
+              <div class="toggles bottom">
+                <p class="left-toggle bottom"><</p>
+                <p class="right-toggle bottom">></p>
+              </div>
+            <% end %>
 
-            <div class="stash-container-bottoms show">
+            <div class="stash-container-bottoms">
 
               <% @bottoms.each do |item| %>
               <div class="stash-wrapper-window-bottoms" style="width:<%= total_width_bottoms %>px">
@@ -120,16 +124,18 @@
             <% total_div_doodads = (total_doodads / num_per_div).ceil %>
             <% total_width_doodads = total_div_doodads * div_width %>
 <!-- Doodad products -->
-            <div class="category show">
+            <div class="category doodad show">
               <p>Doodads</p>
             </div>
 
-            <div>
-              <p class="left-toggle doodad"><</p>
-              <p class="right-toggle doodad">></p>
-            </div>
+            <% if total_div_doodads > 1 %>
+              <div class="toggles doodad">
+                <p class="left-toggle doodad"><</p>
+                <p class="right-toggle doodad">></p>
+              </div>
+            <% end %>
 
-            <div class="stash-container-doodads show">
+            <div class="stash-container-doodads">
 
               <% @doodads.each do |item| %>
               <div class="stash-wrapper-window-doodads" style="width:<%= total_width_doodads %>px">
