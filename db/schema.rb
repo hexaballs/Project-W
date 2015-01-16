@@ -11,10 +11,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141030072240) do
+ActiveRecord::Schema.define(version: 20150116083709) do
 
   create_table "albums", force: true do |t|
-    t.string   "look_type"
     t.string   "look_title"
     t.text     "look_desc"
     t.text     "img_url",     limit: 255
