@@ -47,19 +47,4 @@ ActiveRecord::Schema.define(version: 20141030072240) do
     t.integer  "album_id"
   end
 
-  create_table "references", force: true do |t|
-    t.string   "name"
-    t.integer  "age"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "users", force: true do |t|
-    t.string   "name"
-    t.text     "bio"
-    t.integer  "age"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
 end

@@ -12,9 +12,7 @@ Album.create!([
   {look_type: "K-Pop", look_title: "Look Title", look_desc: "Some description of the look", img_url: "https://41.media.tumblr.com/6683c097e74ca4180290a3a813002a6b/tumblr_n2vpc5APar1r1obk0o1_1280.jpg", link_url: "https://41.media.tumblr.com/6683c097e74ca4180290a3a813002a6b/tumblr_n2vpc5APar1r1obk0o1_1280.jpg", link_name: "", category_id: 10},
   {look_type: "Badass", look_title: "Look Title", look_desc: "Some description of the look", img_url: "https://40.media.tumblr.com/efa64cd3fd1d4e5ace0f9583127a25f1/tumblr_n6lsnss1aW1qd8hm0o1_1280.jpg", link_url: "https://40.media.tumblr.com/efa64cd3fd1d4e5ace0f9583127a25f1/tumblr_n6lsnss1aW1qd8hm0o1_1280.jpg", link_name: "", category_id: 4},
   {look_type: "Hipster", look_title: "Look Title", look_desc: "Some description of the look", img_url: "https://41.media.tumblr.com/1042c55f6e5dc47f56516f53ba3046e5/tumblr_n612q0qjeY1qd8hm0o1_1280.jpg", link_url: "https://41.media.tumblr.com/1042c55f6e5dc47f56516f53ba3046e5/tumblr_n612q0qjeY1qd8hm0o1_1280.jpg", link_name: "", category_id: 16},
-  {look_type: "Alternative", look_title: "Look Title", look_desc: "Some description of the look", img_url: "http://popvizu.files.wordpress.com/2013/10/2585-le-21eme-adam-katz-sinding-billy-nigel-soho_d4a6191-920x1382.jpg", link_url: "http://popvizu.com/2013/10/03/street-style-popvizu/", link_name: "", category_id: 20},
   {look_type: "Casual", look_title: "Look Title", look_desc: "Some description of the look", img_url: "http://i52.tinypic.com/10x95pg.jpg", link_url: "http://i52.tinypic.com/10x95pg.jpg", link_name: "", category_id: 6},
-  {look_type: "Chic", look_title: "Look Title", look_desc: "Some description of the look", img_url: "http://www.itslavida.com/files/2014/06/2.png", link_url: "http://www.itslavida.com/files/2014/06/2.png", link_name: "", category_id: 20}
 ])
 Category.create!([
   {name: "Biker"},
