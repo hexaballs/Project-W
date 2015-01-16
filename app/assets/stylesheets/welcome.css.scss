@@ -147,8 +147,9 @@ div.slider-header:hover:after {
 
 div.img-size {
   float: left;
-  background: url('black-floral-pattern.jpg');
+  background-image: asset-data-url("black-floral-pattern.jpg");
   background-size: 945px 630px;
+  background-color: black;
 }
 
 img.slide-img {
